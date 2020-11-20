@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NewGrudge = ({ onSubmit }) => {
+const NewGrudge = React.memo (({ onSubmit }) => {
   const [person, setPerson] = useState('');
   const [reason, setReason] = useState('');
 
@@ -8,6 +8,8 @@ const NewGrudge = ({ onSubmit }) => {
     event.preventDefault();
     onSubmit({ person, reason });
   };
+
+  console.log('-----New Grudge---')
 
   return (
     <form className="NewGrudge" onSubmit={handleChange}>
@@ -28,6 +30,6 @@ const NewGrudge = ({ onSubmit }) => {
       <input className="NewGrudge-submit button" type="submit" />
     </form>
   );
-};
+});
 
 export default NewGrudge;
