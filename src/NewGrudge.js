@@ -11,7 +11,7 @@ const NewGrudge = () => {
     addGrudge({ person, reason });
   };
 
-  console.log('-----New Grudge---')
+  console.log('-----New Grudge-------')
 
   return (
     <form className="NewGrudge" onSubmit={handleChange}>
